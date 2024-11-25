@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Günlük Çalışma Planlayıcı</title>
+  <link rel="stylesheet" href="style.css">
+
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 20px;
+    }
+    table {
+      border-collapse: collapse;
+      width: 100%;
+    }
+    table, th, td {
+      border: 1px solid black;
+    }
+    th, td {
+      padding: 8px;
+      text-align: left;
+    }
+    th {
+      background-color: #f2f2f2;
+    }
+    .add-task-form {
+      margin-bottom: 20px;
+    }
+  </style>
+</head>
+<body>
+
+<form class="add-task-form">
+  <!-- Görev ekleme formu -->
+</form>
+
+  <h1>Günlük Çalışma Planlayıcı</h1>
+
+  <form class="add-task-form">
+    <input type="text" id="title" placeholder="Başlık" required>
+    <input type="text" id="description" placeholder="Açıklama">
+    <input type="date" id="date" required>
+    <input type="datetime-local" id="reminder_time" placeholder="Hatırlatma Saati">
+    <input type="number" id="duration" placeholder="Süre (dakika)" required>
+    <button type="button" id="add-task-btn">Görev Ekle</button>
+  </form>
+  
+
+  <table>
+    <thead>
+      <tr>
+        <th>Başlık</th>
+        <th>Açıklama</th>
+        <th>Tarih</th>
+        <th>Süre</th>
+        <th>Tamamlandı</th>
+        <th>İşlemler</th>
+      </tr>
+    </thead>
+    <tbody id="task-table-body">
+      <!-- Görevler buraya eklenecek -->
+    </tbody>
+  </table>
+
+  <button type="button" id="download-report-btn">Haftalık Raporu İndir</button>
+
+
+  <script src="script.js"></script>
+</body>
+</html>
